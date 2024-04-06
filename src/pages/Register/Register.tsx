@@ -8,7 +8,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
-  const [error, setError] = useState<string>("");
+  const [error, setError] = useState<string | boolean>("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

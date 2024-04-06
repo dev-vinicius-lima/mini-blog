@@ -1,9 +1,10 @@
 import { User } from "firebase/auth";
-import { useContext, createContext, ReactNode } from "react";
+import { ReactNode, createContext, useContext } from "react";
 
 interface AuthContextType {
   user: User | null;
 }
+
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({
