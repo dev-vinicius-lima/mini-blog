@@ -6,7 +6,6 @@ import {
   orderBy,
   onSnapshot,
   where,
-  QuerySnapshot,
 } from "firebase/firestore";
 
 export interface Document {
@@ -32,22 +31,31 @@ export const useFetchDocuments = (
 
   useEffect(() => {
     let unsubscribe: (() => void) | undefined;
-
     const collectionRef = collection(db, docCollection);
-    const q = query(collectionRef, orderBy("createdAt", "desc"));
 
-    const loadData = () => {
+    async function loadData() {
       setLoading(true);
+      let q;
+
       try {
-        unsubscribe = onSnapshot(q, (querySnapshot) => {
-          setDocuments(
-            querySnapshot.docs.map((doc) => ({
-              id: doc.id,
-              ...doc.data(),
-            })) as Document[]
+        if (search) {
+          q = query(
+            collectionRef,
+            where("tags", "array-contains", search),
+            orderBy("createdAt", "desc")
           );
+        } else {
+          q = query(collectionRef, orderBy("createdAt", "desc"));
+        }
+
+        unsubscribe = onSnapshot(q, (querySnapshot) => {
+          const fetchedDocuments = querySnapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          })) as Document[];
+          setDocuments(fetchedDocuments);
+          setLoading(false);
         });
-        setLoading(false);
       } catch (error: unknown) {
         if (error instanceof Error) {
           console.error("Error fetching documents:", error.message);
@@ -55,7 +63,7 @@ export const useFetchDocuments = (
           setLoading(false);
         }
       }
-    };
+    }
 
     loadData();
 
