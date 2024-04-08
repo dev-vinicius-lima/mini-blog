@@ -46,7 +46,7 @@ function App() {
           <NavBar />
           <div className="container">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={user ? <Home /> : <Login />} />
               <Route path="/about" element={<About />} />
               <Route path="/search" element={<Search />} />
               <Route path="/posts/:id" element={<Post />} />

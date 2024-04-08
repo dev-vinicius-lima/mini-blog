@@ -27,3 +27,13 @@
 .tags span {
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .postContainer h2 {
+    margin: 1rem;
+  }
+  .postContainer img {
+    margin-bottom: 1rem;
+    max-width: 350px;
+  }
+}

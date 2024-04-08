@@ -146,10 +146,15 @@ button[disabled] {
     border-radius: 0;
     color: #fff;
     width: 100px;
+    margin: 0 auto;
   }
 
   form input {
     max-width: 100%;
     margin: 0 auto;
+  }
+
+  h1 h2 {
+    font-size: 1.4rem;
   }
 }

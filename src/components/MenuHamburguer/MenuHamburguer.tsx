@@ -4,9 +4,12 @@ import { useAuthentication } from "../../hooks/useAuthentication";
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import style from "./MenuHamburguer.module.css";
+import { useAuthValue } from "../../context/AuthContext";
 const MenuHamburguer = () => {
   const { logout } = useAuthentication();
   const [open, setOpen] = useState(false);
+  const authValue = useAuthValue();
+  const { user } = authValue || {};
 
   return (
     <div className={style.menu}>
@@ -21,11 +24,14 @@ const MenuHamburguer = () => {
             Home
           </Link>
           <Link to={"/posts/create"}>Novo Post</Link>
+          <Link to={"/register"}>Cadastrar</Link>
           <Link to={"/dashboard"}>Dashboard</Link>
           <Link to={"/about"}>Sobre</Link>
-          <button onClick={logout} className="btn btn-outline">
-            Sair
-          </button>
+          {user && (
+            <button onClick={logout} className="btn btn-outline">
+              Sair
+            </button>
+          )}
         </div>
       )}
     </div>
