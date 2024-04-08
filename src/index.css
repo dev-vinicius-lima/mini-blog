@@ -64,6 +64,7 @@ textarea {
 
 .btn {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #1a8918;
@@ -92,6 +93,7 @@ textarea {
   background-color: #000;
   color: #fff;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
