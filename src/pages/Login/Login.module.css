@@ -7,7 +7,27 @@
 
 .login p {
   color: #aaa;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
+}
+
+.register {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 80px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 20px 0;
+  transition: 0.4s;
+}
+
+.register:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
 }
 
 @media (max-width: 768px) {

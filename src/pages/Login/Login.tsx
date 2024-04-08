@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Login.module.css";
 import { useAuthentication } from "../../hooks/useAuthentication";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -29,6 +30,10 @@ const Login = () => {
     <div className={styles.login}>
       <h1>Entrar</h1>
       <p>Faça o login para poder utilizar o sistema</p>
+      <p>Não tem uma conta?</p>
+      <Link to={"/register"} className={styles.register}>
+        criar uma conta
+      </Link>
       <form onSubmit={handleSubmit}>
         <label>
           <span>Email:</span>
