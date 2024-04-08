@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+# Meu Projeto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Sobre o Projeto
 
-Currently, two official plugins are available:
+Este é o "Lima BLOG" desenvolvido com React, TypeScript, CSS modules e Firestore. O objetivo é demonstrar a integração dessas tecnologias para criar uma aplicação web moderna e escalável.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- **React:** Utilizado para construir a interface de usuário.
+- **TypeScript:** Adiciona tipagem estática ao projeto, melhorando a qualidade do código e a experiência de desenvolvimento.
+- **Firestore:** Fornece um banco de dados em tempo real, autenticação de usuários e armazenamento de arquivos.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🤝 Contribuição
 
-- Configure the top-level `parserOptions` property like this:
+Contribuições são bem-vindas! Para contribuir, siga estas etapas:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Faça um fork do projeto.
+2. Crie uma nova branch com as suas alterações.
+3. Faça commit das suas alterações.
+4. Faça push para a branch.
+5. Abra um Pull Request.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## Link Deploy:
+
+[Lima Blog](https://mini-blog-vl.vercel.app/)
+
+© 2024 GitHub, Inc.
