@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 25px;
+    top: 10px;
+    width: 200px;
+    background-color: transparent;
+    gap: 1rem;
+    padding: 3rem;
+  }
+
+  .modalOpen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 25px;
+    top: 10px;
+    width: 200px;
+    background-color: #ffffffd5;
+    gap: 1rem;
+    padding: 3rem;
+  }
+
+  .icon {
+    position: absolute;
+    z-index: 1;
+    top: 1px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}

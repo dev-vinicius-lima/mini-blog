@@ -10,3 +10,14 @@
 .footer h2 {
   margin-bottom: 1rem;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    height: 100px;
+  }
+  .footer h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}

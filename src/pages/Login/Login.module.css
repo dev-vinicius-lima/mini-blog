@@ -9,3 +9,18 @@
   color: #aaa;
   margin: 2rem 0;
 }
+
+@media (max-width: 768px) {
+  .login {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: auto;
+  }
+}

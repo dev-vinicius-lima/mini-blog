@@ -30,3 +30,14 @@
   font-size: 0.8rem;
   margin-bottom: 1rem;
 }
+
+@media (max-width: 768px) {
+  .post_detail img {
+    max-width: 350px;
+  }
+
+  .post_detail h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}

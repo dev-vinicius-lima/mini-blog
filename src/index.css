@@ -20,8 +20,7 @@ textarea:focus {
   outline: none;
 }
 
-a,
-nav button {
+nav button a {
   text-decoration: none;
   background-color: transparent;
   color: #000;
@@ -38,7 +37,7 @@ nav button:hover {
 
 /* Forms style */
 form {
-  max-width: 40%;
+  max-width: 50%;
   margin: 0 auto;
 }
 
@@ -64,7 +63,7 @@ textarea {
 
 .btn {
   display: flex;
-  flex-direction: row;
+  flex-direction: center;
   justify-content: center;
   align-items: center;
   background-color: #1a8918;
@@ -72,7 +71,7 @@ textarea {
   text-align: center;
   cursor: pointer;
   border-radius: 10px;
-  width: 120px;
+  width: 220px;
   border: none;
   padding: 10px 15px;
   font-size: 1rem;
@@ -93,7 +92,7 @@ textarea {
   background-color: #000;
   color: #fff;
   display: flex;
-  flex-direction: row;
+  flex-direction: center;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
@@ -128,4 +127,29 @@ button[disabled] {
   justify-content: center;
   gap: 1rem;
   flex-direction: column;
+}
+
+.menu_hamburguer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .btn.btn-outline {
+    width: 100px;
+  }
+  * {
+    text-decoration: none;
+    color: #000;
+  }
+  .btn.btn-dark {
+    background-color: #000;
+    border-radius: 0;
+    color: #fff;
+    width: 100px;
+  }
+
+  form input {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }

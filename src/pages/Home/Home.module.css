@@ -33,3 +33,13 @@
 .nopost a {
   padding: 10px 25px;
 }
+
+@media (max-width: 768px) {
+  .search_form {
+    width: 100%;
+  }
+  .home h1 {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+  }
+}
